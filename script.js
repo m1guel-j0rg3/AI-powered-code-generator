@@ -47,10 +47,3 @@ async function gerarCodigo(){
 }
 
 botao.addEventListener("click", gerarCodigo)
-
-const copyButton = document.getElementById('copy-button');
-  const blocoCodigo = document.getElementById('bloco-codigo');
-  
-  copyButton.addEventListener('click', () => {
-    navigator.clipboard.writeText(blocoCodigo.value);
-  });
