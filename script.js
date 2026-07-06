@@ -2,6 +2,15 @@ let botao = document.querySelector(".botao-gerar")
 let chave = "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"
 let endereco = "https://api.groq.com/openai/v1/chat/completions"
 
+function CopiarTexto() {
+    var texto = document.getElementById("copy-button").value
+    navigator.clipboard.writeText(texto).then(function() {
+      alert("Texto copiado com sucesso!");
+    }, function() {
+      alert("Erro ao copiar texto.");
+    });
+  }
+
 async function gerarCodigo(){
     let textoUsuario = document.querySelector(".caixa-texto").value
     let blocoCodigo = document.querySelector(".bloco-codigo")
