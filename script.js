@@ -1,5 +1,5 @@
 let botao = document.querySelector(".botao-gerar")
-let chave = "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"
+let chave = "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"
 let endereco = "https://api.groq.com/openai/v1/chat/completions"
 
 function CopiarTexto() {
@@ -20,7 +20,7 @@ async function gerarCodigo(){
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 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" 
+            "Authorization": `Bearer ${chave}`
         },
         body: JSON.stringify({
             model: "llama-3.3-70b-versatile",
